@@ -1,0 +1,115 @@
+# Chinese (Simplified, China) translations for pymarvin.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the pymarvin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pymarvin VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-22 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../quickstart.rst:2
+msgid "Installation and usage"
+msgstr "安装与使用"
+
+#: ../../quickstart.rst:4
+msgid ""
+"Install from PyPI with uv or pip. Tagged releases provide prebuilt wheels for CPython"
+" 3.10–3.14 on Linux x86_64/aarch64 (glibc 2.28+) and Windows x64. A supported wheel "
+"includes the compiled SDK and needs no compiler or separate SDK installation. "
+"Building from the source archive requires a C++17 compiler and CMake."
+msgstr ""
+"通过 uv 或 pip 从 PyPI 安装。标签发布提供 CPython 3.10–3.14 的预编译 wheel，支持 Linux "
+"x86_64/aarch64（glibc 2.28+）和 Windows x64。匹配平台的 wheel 已包含编译后的 SDK，无需编译器或独立安装 "
+"SDK；从源码归档构建仍需要 C++17 编译器和 CMake。"
+
+#: ../../quickstart.rst:15
+msgid "Importing the package or constructing a facade does not connect to a robot."
+msgstr "导入包或创建接口对象都不会连接机器人。"
+
+#: ../../quickstart.rst:18
+msgid "Offline pose conversion"
+msgstr "离线位姿转换"
+
+#: ../../quickstart.rst:29
+msgid "Initialize a robot model"
+msgstr "初始化机器人模型"
+
+#: ../../quickstart.rst:31
+msgid ""
+"Robot-specific calculations require a matching vendor configuration. Load the chosen "
+"arm, then initialize robot type, DH parameters and joint limits before FK, IK or "
+"planning. Poses use millimetres/degrees; joint angles use degrees."
+msgstr "机器人相关计算需要匹配的厂商配置；先加载指定机械臂，再初始化机器人类型、DH 参数和关节限位，随后执行 FK、IK 或规划。位姿使用毫米和度，关节角使用度。"
+
+#: ../../quickstart.rst:48
+msgid "Controller connection"
+msgstr "控制器连接"
+
+#: ../../quickstart.rst:50
+msgid ""
+"The basic interface retains the official clear-set-send transaction order. Always "
+"release an acquired connection. These examples do not issue motion commands."
+msgstr "基础接口保留官方的清空、设置、发送事务顺序；成功建立连接后应始终释放。本示例不发送运动指令。"
+
+#: ../../quickstart.rst:67
+msgid "Official showcases"
+msgstr "官方示例"
+
+#: ../../quickstart.rst:69
+msgid ""
+"The source distribution includes the official Marvin Python showcases in "
+"``examples/``. They use the packaged ``pymarvin`` modules and cover controller "
+"commands, planning, telemetry, offline kinematics and interference checks. Most "
+"connect to a real robot and some issue motion or configuration commands; read "
+"``examples/README.md`` and the selected script before running one. The "
+"``offline_kinematics.py`` and ``offline_interference.py`` examples do not require "
+"hardware."
+msgstr ""
+"源码包在 ``examples/`` 中包含官方 Marvin Python 示例，使用打包的 ``pymarvin`` "
+"模块，覆盖控制器指令、规划、遥测、离线运动学和干涉检测。大多数示例会连接真实机器人，部分会发送运动或配置指令；运行前请阅读 ``examples/README.md`` "
+"和所选脚本。``offline_kinematics.py`` 和 ``offline_interference.py`` 无需硬件。"
+
+#: ../../quickstart.rst:77
+msgid "Offline interference check"
+msgstr "离线干涉检测"
+
+#: ../../quickstart.rst:79
+msgid ""
+"The bundled interference model can be exercised without a controller. The model "
+"definition files are installed with the package and the same interface is used by "
+"``showcase_drag_interference.py`` when live joint values are available."
+msgstr "无需控制器即可运行随包提供的干涉模型。模型定义文件会随包安装；有实时关节值时，``showcase_drag_interference.py`` 使用相同接口。"
+
+#: ../../quickstart.rst:109
+msgid "Owned trajectory points"
+msgstr "自有轨迹点集"
+
+#: ../../quickstart.rst:111
+msgid ""
+"Planning methods preserve tuples such as ``(data, pset)``. The handle is an owned "
+"``PointSet`` rather than an integer address. A control call copies seven-dimensional "
+"points into its own SDK representation."
+msgstr ""
+"规划方法保留 ``(data, pset)`` 等元组返回值；句柄为拥有内存的 ``PointSet`` 对象，而非整数地址。控制接口会将七维点复制到自身 SDK "
+"的表示中。"
+
+#: ../../quickstart.rst:123
+msgid ""
+"``destroy_point_set(pset)`` and ``pset.close()`` are both supported. Closing "
+"repeatedly is safe; access after closing raises an exception. Raw addresses and "
+"ctypes pointer handles are rejected."
+msgstr ""
+"支持 ``destroy_point_set(pset)`` 和 ``pset.close()`` ；重复关闭安全，关闭后访问会抛出异常。整数地址和 ctypes "
+"指针句柄会被拒绝。"
+

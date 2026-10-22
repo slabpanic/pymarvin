@@ -1,0 +1,229 @@
+# Chinese (Simplified, China) translations for pymarvin.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the pymarvin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pymarvin VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-22 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../development.rst:2
+msgid "Development and publishing"
+msgstr "开发与发布"
+
+#: ../../development.rst:5
+msgid "Verification"
+msgstr "验证"
+
+#: ../../development.rst:18
+msgid ""
+"Maintain the nanobind C++ bindings in ``src/bindings/`` and the compatible Python "
+"facades in ``src/pymarvin/`` directly. Update their English docstrings in place. "
+"Maintain the required Apache-2.0 SDK sources in ``src/sdk/control/``, "
+"``src/sdk/kinematics/`` and ``src/sdk/interference/``. Tests check the SDK headers "
+"against the installed extensions; reference copies and obsolete SDKs are not part of "
+"the project."
+msgstr ""
+"直接维护 ``src/bindings/`` 中的 nanobind C++ 绑定和 ``src/pymarvin/`` 中的兼容 Python "
+"接口，并在原处更新英文文档字符串。所需的 Apache-2.0 SDK 源码位于 ``src/sdk/control/``、``src/sdk/kinematics/``"
+" 和 ``src/sdk/interference/``。测试会检查 SDK 头文件与已安装扩展的一致性；项目不包含参考副本和旧版 SDK。"
+
+#: ../../development.rst:24
+msgid ""
+"The bundled SDK snapshot is pinned to commit "
+"``bc4f61104a66e82b4c750f3a0bc7a95c9ef44139`` from the official "
+"`TJ_FX_ROBOT_CONTRL_SDK repository <https://github.com/cynthia-"
+"you/TJ_FX_ROBOT_CONTRL_SDK>`_."
+msgstr ""
+"随包 SDK 快照固定为官方 ``TJ_FX_ROBOT_CONTRL_SDK`` 仓库的提交 "
+"``bc4f61104a66e82b4c750f3a0bc7a95c9ef44139``。"
+
+#: ../../development.rst:29
+msgid "English and Chinese documentation"
+msgstr "英文与中文文档"
+
+#: ../../development.rst:31
+msgid ""
+"``docs/_ext/generate_api.py`` inspects the installed package exports, validates "
+"public docstrings and generates the API index when Sphinx loads ``docs/conf.py``. "
+"Generated API pages are excluded from version control and source distributions. CI "
+"invokes Sphinx and the translation checker directly."
+msgstr ""
+"``docs/_ext/generate_api.py`` 会检查已安装包的公开导出和文档字符串，并在 Sphinx 加载 ``docs/conf.py`` 时生成 API 索引。"
+"自动生成的 API 页面不会纳入版本控制和源码包。CI 会直接运行 Sphinx 和翻译检查器。"
+
+#: ../../development.rst:36
+msgid ""
+"English reStructuredText and API docstrings are the source language. Chinese "
+"translations live in ``docs/locale/zh_CN/LC_MESSAGES/*.po``. The catalog checker "
+"rejects missing, untranslated, fuzzy, stale and invalid entries."
+msgstr ""
+"英文 reStructuredText 和 API 文档字符串为源语言，中文翻译位于 ``docs/locale/zh_CN/LC_MESSAGES/*.po`` "
+"；目录检查器会拒绝缺失、未翻译、模糊、过期或无效的条目。"
+
+#: ../../development.rst:47
+msgid ""
+"After editing source text, run the catalog checker with ``--update``, translate the "
+"new entries, and rerun the check without that option. Each documentation page links "
+"to the same page in the other language."
+msgstr "修改源文本后，先使用 ``--update`` 选项运行目录检查器，翻译新增条目，再去掉该选项重新检查。每个文档页面均可链接至另一种语言的对应页面。"
+
+#: ../../development.rst:52
+msgid "Read the Docs setup"
+msgstr "Read the Docs 配置"
+
+#: ../../development.rst:54
+msgid ""
+"Import ``https://github.com/slabpanic/pymarvin`` into Read the Docs as project "
+"``pymarvin``, select English as its language, use ``main`` as the default branch, and"
+" select ``.readthedocs.yaml`` as the configuration file. Enable the repository's Read"
+" the Docs Git integration to build documentation when changes are pushed."
+msgstr ""
+"在 Read the Docs 中将 ``https://github.com/slabpanic/pymarvin`` 导入为 ``pymarvin`` "
+"项目，语言选择英语，默认分支设为 ``main``，配置文件选择 ``.readthedocs.yaml``。启用仓库的 Read the Docs Git "
+"集成，以便推送更改时自动构建文档。"
+
+#: ../../development.rst:59
+msgid ""
+"For Simplified Chinese, import the same repository as a second project, for example "
+"``pymarvin-zh-cn``, select Simplified Chinese as its language, and add it under the "
+"parent project's Translations settings. Both projects use the same configuration and "
+"gettext catalogs. Read the Docs supplies the selected language and version; Sphinx "
+"uses them for translated pages, canonical URLs and language-switch links."
+msgstr ""
+"简体中文需要将同一仓库导入为另一个项目，例如 ``pymarvin-zh-cn``，语言选择简体中文，并在主项目的 Translations "
+"设置中添加它。两个项目共用配置文件和 gettext 翻译目录。Read the Docs 提供当前语言与版本，Sphinx 据此生成翻译页面、规范网址和语言切换链接。"
+
+#: ../../development.rst:65
+msgid ""
+"The public URLs are ``https://pymarvin.readthedocs.io/en/latest/`` and "
+"``https://pymarvin.readthedocs.io/zh-cn/latest/``. CI independently checks both "
+"languages and uploads available HTML previews even if a documentation build fails. "
+"Read the Docs performs the hosted build using the repository configuration."
+msgstr ""
+"公开文档地址为 ``https://pymarvin.readthedocs.io/en/latest/`` 和 "
+"``https://pymarvin.readthedocs.io/zh-cn/latest/``。CI 独立检查两种语言，即使文档构建失败也会上传已经生成的 HTML "
+"预览。Read the Docs 根据仓库配置执行线上文档构建。"
+
+#: ../../development.rst:71
+msgid "PyPI Trusted Publishing setup"
+msgstr "PyPI 信任发布设置"
+
+#: ../../development.rst:73
+msgid ""
+"Create a PyPI Trusted Publisher (or pending publisher for a new project) with owner "
+"``slabpanic``, repository ``pymarvin``, workflow ``release.yml`` and environment "
+"``pypi``. Create the matching GitHub environment. No long-lived PyPI API token is "
+"used."
+msgstr ""
+"创建 PyPI 信任发布者，首次新项目可使用待定发布者；填写所有者 ``slabpanic`` 、仓库 ``pymarvin`` 、工作流 ``release.yml``"
+" 和环境 ``pypi`` ，并在 GitHub 创建同名环境。不使用长期 PyPI API token。"
+
+#: ../../development.rst:77
+msgid ""
+"Set the normalized project version, update ``uv.lock``, and push a matching "
+"``vX.Y.Z`` tag when ready to publish. ``release.yml`` calls the reusable ``ci.yml`` "
+"workflow, which validates the tag, builds and verifies one source archive, runs tests"
+" and coverage, validates bilingual documentation, and builds, repairs and tests all "
+"15 CPython 3.10–3.14 wheels for Linux x86_64/aarch64 and Windows x64."
+msgstr ""
+"准备发布时，设置规范化的项目版本、更新 ``uv.lock``，并推送匹配的 ``vX.Y.Z`` 标签。``release.yml`` 调用可复用的 "
+"``ci.yml`` 工作流，统一校验标签、构建并验证一份源码归档、执行测试与覆盖率检查、校验双语文档，并构建、修复和测试 Linux x86_64/aarch64 及 "
+"Windows x64 上 CPython 3.10–3.14 的全部 15 个 wheel。"
+
+#: ../../development.rst:83
+msgid ""
+"CI collects the source archive and wheels, verifies the complete set with "
+"``check_wheels.py`` and Twine, and uploads the ``pymarvin-dist`` artifact. After CI "
+"succeeds, the release job downloads that artifact and runs ``uv publish --trusted-"
+"publishing always dist/*`` without rebuilding packages. macOS is excluded. CI "
+"validates documentation while Read the Docs handles hosting."
+msgstr ""
+"CI 汇总源码归档和 wheel，通过 ``check_wheels.py`` 与 Twine 校验完整产物集合，再上传 ``pymarvin-dist`` 产物。CI "
+"成功后，发布任务下载该产物并运行 ``uv publish --trusted-publishing always dist/*``，不重复构建包。不包含 "
+"macOS。CI 负责文档校验，Read the Docs 负责文档托管。"
+
+#: ../../development.rst:89
+msgid ""
+"Do not recreate an existing PyPI version. Correct a failed release in a new version "
+"when an archive has already been accepted by the registry. Configuring this workflow "
+"does not publish a release until a matching tag is pushed."
+msgstr "不要重新创建已有 PyPI 版本；若仓库已接受归档，失败发布应通过新版本修正。配置工作流不会立即发布版本，只有推送匹配的标签后才会触发。"
+
+#: ../../development.rst:94
+msgid "Codecov and native coverage"
+msgstr "Codecov 与原生覆盖率"
+
+#: ../../development.rst:96
+msgid ""
+"Enable ``slabpanic/pymarvin`` in Codecov and allow GitHub OIDC uploads. The coverage "
+"job requests ``id-token: write`` and sends separate ``python`` and ``native`` flags. "
+"Fork PRs still generate coverage artifacts but do not upload with repository "
+"identity."
+msgstr ""
+"在 Codecov 启用 ``slabpanic/pymarvin`` 并允许 GitHub OIDC 上传。覆盖率任务请求 ``id-token: write`` "
+"权限，并分别发送 ``python`` 与 ``native`` 标志。Fork PR 仍会生成覆盖率产物，但不使用仓库身份上传。"
+
+#: ../../development.rst:110
+msgid ""
+"If a workstation has unrelated pytest plugins on PYTHONPATH, set "
+"``PYTEST_DISABLE_PLUGIN_AUTOLOAD=1``. CI sets this explicitly. Coverage thresholds "
+"are enforced in CI: 95 percent combined Python statement/branch coverage and 75 "
+"percent native line coverage. Codecov compares each flag against its base commit with"
+" a 1 percent tolerance; its treatment of partially covered branches differs from the "
+"line metric. Uncovered controller-dependent paths remain in the reports."
+msgstr ""
+"如果工作站的 PYTHONPATH 中存在无关 pytest 插件，请设置 ``PYTEST_DISABLE_PLUGIN_AUTOLOAD=1`` ；CI "
+"已显式设置此变量。CI 强制要求 Python 语句与分支综合覆盖率至少为 95%，原生代码行覆盖率至少为 75%。Codecov 将每个标记与基准提交比较，允许 1% "
+"的差异；它对部分覆盖分支的处理与行覆盖率指标不同。需要控制器的未覆盖路径仍保留在报告中。"
+
+#: ../../development.rst:117
+msgid ""
+"Test execution, Python reporting and native reporting use separate CI steps. Both "
+"reporting steps run with ``if: always()`` so failures retain diagnostic reports; the "
+"original test failure still fails CI. Codecov uploads run only after successful "
+"checks and use ``plugins: noop`` to upload the explicitly generated XML files."
+msgstr ""
+"测试执行、Python 覆盖率报告和原生覆盖率报告使用独立的 CI 步骤。两个报告步骤均设置 ``if: "
+"always()``，使失败后仍能保留诊断报告；原始测试失败仍会使 CI 失败。Codecov 仅在检查成功后上传，并通过 ``plugins: noop`` "
+"关闭插件，仅上传显式生成的 XML 文件。"
+
+#: ../../development.rst:123
+msgid "Hosting references"
+msgstr "托管参考"
+
+#: ../../development.rst:125
+msgid ""
+"`PyPI Trusted Publishers <https://docs.pypi.org/trusted-"
+"publishers/adding-a-publisher/>`_"
+msgstr "`PyPI 信任发布者 <https://docs.pypi.org/trusted-publishers/adding-a-publisher/>`_"
+
+#: ../../development.rst:128
+msgid ""
+"`Read the Docs project setup <https://docs.readthedocs.com/platform/stable/intro/add-"
+"project.html>`_"
+msgstr ""
+"`Read the Docs 项目配置 <https://docs.readthedocs.com/platform/stable/intro/add-"
+"project.html>`_"
+
+#: ../../development.rst:131
+msgid ""
+"`Read the Docs translations "
+"<https://docs.readthedocs.com/platform/stable/localization.html>`_"
+msgstr "`Read the Docs 翻译配置 <https://docs.readthedocs.com/platform/stable/localization.html>`_"
+
+#: ../../development.rst:134
+msgid "`Codecov Action <https://github.com/codecov/codecov-action>`_"
+msgstr "`Codecov Action <https://github.com/codecov/codecov-action>`_"
+

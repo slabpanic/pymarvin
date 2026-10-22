@@ -1,0 +1,926 @@
+# Chinese (Simplified, China) translations for pymarvin.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the pymarvin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pymarvin VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-22 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../api.rst:2
+msgid "API reference"
+msgstr "API 参考"
+
+#: ../../api.rst:4
+msgid ""
+"These pages are generated from the installed public exports and their docstrings. "
+"Each build validates that public classes, Python methods and properties have English "
+"documentation."
+msgstr "这些页面根据已安装包的公开接口及文档字符串生成。每次构建都会检查公开类、Python 方法和属性是否具有英文文档。"
+
+#: ../../api/_generated/pymarvin.rst:2
+msgid "Public package API"
+msgstr "包的公开接口"
+
+#: ../../api/_generated/pymarvin.rst:5
+msgid "pymarvin.Marvin_Robot"
+msgstr "pymarvin.Marvin_Robot"
+
+#: pymarvin.fx_robot.Marvin_Robot:1
+msgid ""
+"Basic controller interface. Clear the command batch, set parameters, then send it. "
+"Instances share SDK state."
+msgstr "基础控制器接口：清空指令批次、设置参数，然后发送；实例共享 SDK 状态。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.connect:1
+#: pymarvin.fx_robot.Marvin_Robot.connect:1
+msgid ""
+"Connect to the controller at an IPv4 address. The concise interface also configures "
+"controller logging."
+msgstr "连接到指定 IPv4 地址的控制器；简化接口还会设置控制器日志开关。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.subscribe:1
+#: pymarvin.fx_robot.Marvin_Robot.subscribe:1
+msgid ""
+"Fill a DCSS record and return its nested state dictionary. The concise interface "
+"returns None on failure."
+msgstr "填充 DCSS 记录并返回嵌套状态字典；简化接口在失败时返回 None。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.check_error_and_clear:1
+#: pymarvin.fx_robot.Marvin_Robot.check_error_and_clear:1
+msgid "Inspect arm and servo errors and request error clearing when necessary."
+msgstr "检查机械臂和伺服错误，并在需要时请求清错。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.release_robot:1
+#: pymarvin.fx_robot.Marvin_Robot.release_robot:1
+msgid ""
+"Release the shared controller connection. Repeated release before initialization is "
+"safe."
+msgstr "释放共享的控制器连接；未初始化时重复释放是安全的。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.SDK_version:1
+#: pymarvin.fx_robot.Marvin_Robot.SDK_version:1
+msgid "Return the version reported by the compiled control SDK."
+msgstr "返回已编译控制 SDK 报告的版本号。"
+
+#: pymarvin.fx_robot.Marvin_Robot.check_sdk_type_compat:1
+msgid ""
+"Check C type sizes, pack(4) layout and byte order. Return the SDK status and byte-"
+"order indicator."
+msgstr "检查 C 类型大小、pack(4) 布局和字节序，返回 SDK 状态和字节序标志。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.update_SDK:1
+#: pymarvin.fx_robot.Marvin_Robot.update_SDK:1
+msgid "Upload a local controller system update package. Check the returned SDK status."
+msgstr "上传本地控制器系统升级包，并检查 SDK 返回状态。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.download_sdk_log:1
+#: pymarvin.fx_robot.Marvin_Robot.download_sdk_log:1
+msgid "Download controller logs to the requested local path."
+msgstr "将控制器日志下载到指定本地路径。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.get_param:1
+#: pymarvin.fx_robot.Marvin_Robot.get_param:1
+msgid ""
+"Read an integer or floating-point parameter by its ASCII controller parameter name. "
+"Return (status, value)."
+msgstr "通过 ASCII 控制器参数名称读取整数或浮点参数，返回 (status, value)。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.save_para_file:1
+#: pymarvin.fx_robot.Marvin_Robot.save_para_file:1
+msgid "Save the current controller configuration parameters."
+msgstr "保存当前控制器配置参数。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_param:1
+#: pymarvin.fx_robot.Marvin_Robot.set_param:1
+msgid "Write an integer or floating-point controller parameter and return the SDK status."
+msgstr "写入整数或浮点控制器参数，并返回 SDK 状态。"
+
+#: pymarvin.fx_robot.Marvin_Robot.clear_set:1
+msgid "Clear the pending command batch before appending basic-interface commands."
+msgstr "在添加基础接口指令前清空待发送指令批次。"
+
+#: pymarvin.fx_robot.Marvin_Robot.send_cmd:1
+msgid "Send the pending basic-interface command batch to the controller."
+msgstr "将基础接口的待发送指令批次发送给控制器。"
+
+#: pymarvin.fx_robot.Marvin_Robot.send_cmd_wait_response:1
+msgid ""
+"Send the pending command batch and wait for a response using the SDK timeout in "
+"milliseconds."
+msgstr "发送待处理指令批次，并按 SDK 毫秒超时等待响应。"
+
+#: pymarvin.fx_robot.Marvin_Robot.collect_data:1
+msgid ""
+"Start recording up to 35 telemetry fields identified by targetID. The identifier "
+"buffer is padded to 35 entries."
+msgstr "开始记录 targetID 指定的最多 35 项遥测数据，标识缓冲区会补齐为 35 项。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.stop_collect_data:1
+#: pymarvin.fx_robot.Marvin_Robot.stop_collect_data:1
+msgid "Stop recording controller telemetry."
+msgstr "停止记录控制器遥测数据。"
+
+#: pymarvin.fx_robot.Marvin_Robot.save_collected_data_to_path:1
+msgid "Save recorded telemetry to a local data file."
+msgstr "将采集的遥测数据保存到本地数据文件。"
+
+#: pymarvin.fx_robot.Marvin_Robot.save_collected_data_as_csv_to_path:1
+msgid "Save recorded telemetry to a local CSV file using the official conversion format."
+msgstr "使用官方转换格式将采集的遥测数据保存为本地 CSV 文件。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.soft_stop:1
+#: pymarvin.fx_robot.Marvin_Robot.soft_stop:1
+msgid "Request a software emergency stop for arm A, B or both arms (AB)."
+msgstr "请求 A 臂、B 臂或双臂 AB 的软件急停。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.servo_reset:1
+#: pymarvin.fx_robot.Marvin_Robot.servo_reset:1
+msgid "Reset the specified servo axis, numbered 0 through 6, on arm A or B."
+msgstr "复位 A 臂或 B 臂上指定的伺服轴，轴编号为 0 到 6。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.get_servo_error_code:1
+#: pymarvin.fx_robot.Marvin_Robot.get_servo_error_code:1
+msgid ""
+"Read servo fault codes and return their descriptions in the selected CN or EN "
+"language."
+msgstr "读取伺服故障码，并返回所选 CN 或 EN 语言的故障描述。"
+
+#: pymarvin.fx_robot.Marvin_Robot.clear_error:1
+msgid "Append an error-clear command for arm A or B to the pending batch."
+msgstr "向待发送批次中添加 A 臂或 B 臂的清错指令。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_state:1
+msgid ""
+"Set the target arm state: 0 disabled, 1 position, 2 PVT, 3 torque, or 4 cooperative "
+"release."
+msgstr "设置机械臂目标状态：0 下使能、1 位置、2 PVT、3 扭矩或 4 协作释放。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_impedance_type:1
+msgid "Select joint (1), Cartesian (2) or force (3) impedance for arm A or B."
+msgstr "为 A 臂或 B 臂选择关节 (1)、笛卡尔 (2) 或力 (3) 阻抗。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_vel_acc:1
+msgid ""
+"Set arm velocity and acceleration percentages. These limits do not constrain PVT "
+"playback or dragging."
+msgstr "设置机械臂速度和加速度百分比；这些限制不约束 PVT 回放或拖动。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_tool:1
+#: pymarvin.fx_robot.Marvin_Robot.set_tool:1
+msgid ""
+"Set six tool kinematic parameters and ten tool dynamic parameters for the selected "
+"arm."
+msgstr "为指定机械臂设置 6 项工具运动学参数和 10 项工具动力学参数。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_joint_kd_params:1
+msgid "Set seven joint stiffness values K and seven damping values D for arm A or B."
+msgstr "为 A 臂或 B 臂设置 7 项关节刚度 K 和 7 项阻尼 D。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_cart_kd_params:1
+msgid ""
+"Set seven Cartesian/null-space stiffness and damping values and the Cartesian "
+"impedance type (default 2)."
+msgstr "设置 7 项笛卡尔及零空间刚度、阻尼参数，并选择笛卡尔阻抗类型，默认值为 2。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_force_control_params:1
+msgid ""
+"Set the force-control mode, six-dimensional force direction, seven control parameters"
+" and adjustment limit."
+msgstr "设置力控模式、六维力方向、7 项控制参数和调节限幅。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_EefCart_control_params:1
+msgid "Set the end-effector Cartesian rotation mode and its seven control parameters."
+msgstr "设置末端笛卡尔旋转模式及其 7 项控制参数。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_joint_cmd_pose:1
+msgid "Append a seven-joint position command in degrees for arm A or B."
+msgstr "为 A 臂或 B 臂添加单位为度的七关节位置指令。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_force_cmd:1
+#: pymarvin.fx_robot.Marvin_Robot.set_force_cmd:1
+msgid ""
+"Set the target force for the selected arm in newtons (or torque in newton-metres as "
+"defined by the mode)."
+msgstr "设置指定机械臂的目标力，单位为牛顿，或按模式定义设置单位为牛米的扭矩。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.ft_arm_control:1
+#: pymarvin.fx_robot.Marvin_Robot.ft_arm_control:1
+msgid ""
+"Apply an FTCmd force/torque command by value. Distances use millimetres and angles "
+"use degrees."
+msgstr "按值应用 FTCmd 力及扭矩指令，距离单位为毫米，角度单位为度。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_user_specified_data:1
+#: pymarvin.fx_robot.Marvin_Robot.set_user_specified_data:1
+msgid "Select user telemetry category data for arm A, B or both arms (AB)."
+msgstr "为 A 臂、B 臂或双臂 AB 选择用户遥测数据类别。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_pvt_id:1
+msgid "Select and run the uploaded PVT trajectory identifier for the selected arm."
+msgstr "选择并运行指定机械臂上已上传的 PVT 轨迹编号。"
+
+#: pymarvin.fx_robot.Marvin_Robot.send_pvt_file:1
+msgid "Upload a local PVT trajectory file for the selected arm and identifier."
+msgstr "按照指定机械臂和编号上传本地 PVT 轨迹文件。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_drag_space:1
+msgid "Set the SDK dragging-space mode for the selected arm; zero exits dragging."
+msgstr "设置指定机械臂的 SDK 拖动空间模式，零值表示退出拖动。"
+
+#: pymarvin.fx_robot.Marvin_Robot.receive_file:1
+msgid "Download a controller file from remote_path to local_path."
+msgstr "将控制器的 remote_path 文件下载至 local_path。"
+
+#: pymarvin.fx_robot.Marvin_Robot.send_file:1
+msgid "Upload local_path to the controller file path remote_path."
+msgstr "将 local_path 文件上传至控制器的 remote_path 路径。"
+
+#: pymarvin.fx_robot.Marvin_Robot.log_switch:1
+msgid "Set controller logging using the official on/off flag convention."
+msgstr "按官方 on/off 标志约定设置控制器日志开关。"
+
+#: pymarvin.fx_robot.Marvin_Robot.local_log_switch:1
+msgid "Set local SDK logging using the official on/off flag convention."
+msgstr "按官方 on/off 标志约定设置本地 SDK 日志开关。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.pln_init:1
+#: pymarvin.fx_robot.Marvin_Robot.pln_init:1
+msgid "Initialize controller joint-planning limits from a local configuration file."
+msgstr "从本地配置文件初始化控制器关节规划限位。"
+
+#: pymarvin.fx_robot.Marvin_Robot.stopRunPln_joint:1
+msgid "Stop the active joint or Cartesian plan for arm A or B."
+msgstr "停止 A 臂或 B 臂正在执行的关节或笛卡尔规划。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.setPln_joint_AB:1
+#: pymarvin.fx_robot.Marvin_Robot.setPln_joint_AB:1
+msgid ""
+"Start both arms' joint-space plans together using seven-element start/end vectors and"
+" velocity/acceleration ratios."
+msgstr "使用七元素起止向量及速度和加速度比例，同时启动双臂关节空间规划。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.setPln_Cart_AB:1
+#: pymarvin.fx_robot.Marvin_Robot.setPln_Cart_AB:1
+msgid ""
+"Run two seven-dimensional PointSet trajectories together. Raw integer pointers are "
+"not accepted."
+msgstr "同时运行两组七维 PointSet 轨迹，不接受整数指针。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.stopPln_AB:1
+#: pymarvin.fx_robot.Marvin_Robot.stopPln_AB:1
+msgid "Stop planning on both arms."
+msgstr "停止双臂规划。"
+
+#: pymarvin.fx_robot.Marvin_Robot.setPln_joint:1
+msgid ""
+"Plan joint-space movement between two seven-joint vectors using velocity and "
+"acceleration ratios in (0, 1]."
+msgstr "在两组七关节向量之间规划关节空间运动，速度和加速度比例范围为 (0, 1]。"
+
+#: pymarvin.fx_robot.Marvin_Robot.setPln_Cart:1
+msgid ""
+"Run a seven-dimensional PointSet trajectory on arm A or B without transferring C++ "
+"object ownership."
+msgstr "在 A 臂或 B 臂运行七维 PointSet 轨迹，不转移 C++ 对象所有权。"
+
+#: pymarvin.fx_robot.Marvin_Robot.clear_485_cache:1
+msgid "Clear the selected arm's end-effector communication buffer."
+msgstr "清空指定机械臂末端通信缓冲区。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_485_data:1
+msgid ""
+"Send at most 256 bytes to the selected end-effector channel: 1 CAN/CANFD, 2 COM1, or "
+"3 COM2."
+msgstr "向指定末端通道发送最多 256 字节：1 CAN/CANFD、2 COM1 或 3 COM2。"
+
+#: pymarvin.fx_robot.Marvin_Robot.get_485_data:1
+msgid ""
+"Read end-effector communication data and return the SDK status plus its hexadecimal "
+"byte string."
+msgstr "读取末端通信数据，返回 SDK 状态和十六进制字节字符串。"
+
+#: pymarvin.fx_robot.Marvin_Robot.set_PD_vel_est_step:1
+msgid "Set the velocity-estimation step for the selected arm in milliseconds."
+msgstr "设置指定机械臂的速度估计步长，单位为毫秒。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.get_robot_name:1
+#: pymarvin.fx_robot.Marvin_Robot.get_robot_name:1
+msgid "Download and read the controller robot name as UTF-8 text, returning None on failure."
+msgstr "下载并以 UTF-8 文本读取控制器机器人名称，失败时返回 None。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.reset_6dof_force_sensor:1
+#: pymarvin.fx_robot.Marvin_Robot.reset_6dof_force_sensor:1
+msgid "Request zeroing of the selected arm's six-axis force sensor."
+msgstr "请求对指定机械臂的六维力传感器进行清零。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_system_time:1
+#: pymarvin.fx_robot.Marvin_Robot.set_system_time:1
+msgid ""
+"Set controller calendar time using year, month, day, hour, minute and scenod (the "
+"official seconds argument name)."
+msgstr "使用年月日时分和 scenod 设置控制器时间，scenod 为官方秒参数名称。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.reboot:1 pymarvin.fx_robot.Marvin_Robot.reboot:1
+msgid "Request a controller reboot and return the SDK status."
+msgstr "请求控制器重启，并返回 SDK 状态。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.stop_running:1
+#: pymarvin.fx_robot.Marvin_Robot.stop_running:1
+msgid "Request a motion stop for A, B or AB. The official Python wrapper returns None."
+msgstr "请求 A、B 或 AB 停止运动；官方 Python 包装层返回 None。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.get_tool_info:1
+#: pymarvin.fx_robot.Marvin_Robot.get_tool_info:1
+msgid "Download tool kinematic/dynamic data and decode the official two-line, 16-column file."
+msgstr "下载工具运动学和动力学数据，并解析官方两行、16 列文件。"
+
+#: pymarvin.fx_kine.Marvin_Kine.help:1 pymarvin.fx_robot.Concise_Marvin_Robot.help:1
+#: pymarvin.fx_robot.Marvin_Robot.help:1
+msgid "Print public method signatures or the documentation for method_name."
+msgstr "打印公开方法签名或 method_name 指定方法的文档。"
+
+#: ../../api/_generated/pymarvin.rst:11
+msgid "pymarvin.Concise_Marvin_Robot"
+msgstr "pymarvin.Concise_Marvin_Robot"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot:1
+msgid ""
+"Controller interface that batches commands and checks errors inside the SDK. "
+"Instances share SDK state."
+msgstr "由 SDK 内部批量发送指令并检查错误的控制器接口；实例共享 SDK 状态。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.check_arms_error:1
+msgid "Check and clear arm-state errors using the concise SDK interface."
+msgstr "通过简化 SDK 接口检查并清除机械臂状态错误。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.check_servo_error:1
+msgid "Check and clear servo errors using the concise SDK interface."
+msgstr "通过简化 SDK 接口检查并清除伺服错误。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.start_collect_data:1
+msgid ""
+"Start recording up to 35 telemetry fields, clamping record count to 1,000 through "
+"1,000,000."
+msgstr "开始记录最多 35 项遥测数据，记录数限制为 1,000 至 1,000,000。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.save_gather_data:1
+msgid "Save recorded telemetry in the SDK data-file format."
+msgstr "按 SDK 数据文件格式保存已采集的遥测数据。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.save_gather_data_as_csv_to_path:1
+msgid "Save recorded telemetry as CSV using the concise interface's conversion format."
+msgstr "按简化接口的转换格式将已采集遥测数据保存为 CSV。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_position_state:1
+msgid "Enter position mode with velocity and acceleration percentages for arm A or B."
+msgstr "按指定速度和加速度百分比将 A 臂或 B 臂切换到位置模式。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_imp_joint_state:1
+msgid "Enter joint impedance mode with seven stiffness and damping values."
+msgstr "使用 7 项刚度和阻尼参数进入关节阻抗模式。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_imp_cart_state:1
+msgid ""
+"Enter Cartesian impedance mode with stiffness, damping and end-effector rotation "
+"parameters."
+msgstr "使用刚度、阻尼和末端旋转参数进入笛卡尔阻抗模式。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_imp_force_state:1
+msgid "Enter force impedance mode using a six-element force direction and adjustment limit."
+msgstr "使用六元素力方向和调节限幅进入力阻抗模式。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_joint_position_cmd:1
+msgid "Send a seven-joint position command in degrees through the concise interface."
+msgstr "通过简化接口发送单位为度的七关节位置指令。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.run_pln_joint:1
+msgid "Run a joint-space plan between seven-joint start/end vectors using ratios in (0, 1]."
+msgstr "使用 (0, 1] 范围内的比例，在七关节起止向量之间运行关节空间规划。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.run_pln_cart:1
+msgid "Run a seven-dimensional PointSet trajectory through the concise interface."
+msgstr "通过简化接口运行七维 PointSet 轨迹。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.stop_pln:1
+msgid "Stop the selected arm's active plan."
+msgstr "停止指定机械臂当前的规划。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.send_pvt:1
+msgid "Upload a local PVT file to the selected arm's trajectory identifier."
+msgstr "将本地 PVT 文件上传至指定机械臂的轨迹编号。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.run_pvt:1
+msgid "Run a previously uploaded PVT trajectory identifier."
+msgstr "运行已上传的指定编号 PVT 轨迹。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_joint_drag:1
+msgid "Enter joint dragging after configuring the required joint impedance mode."
+msgstr "在配置所需关节阻抗模式后进入关节拖动。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_cart_drag:1
+msgid ""
+"Enter Cartesian dragging for X, Y, Z or R (rotation). Exit dragging before selecting "
+"another mode."
+msgstr "进入 X、Y、Z 或 R 旋转方向的笛卡尔拖动，切换模式前应先退出拖动。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.exit_drag:1
+msgid "Exit dragging on the selected arm."
+msgstr "退出指定机械臂的拖动模式。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.disable:1
+msgid "Disable or reset the selected arm."
+msgstr "下使能或复位指定机械臂。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.clear_ch_data:1
+msgid "Clear the selected end-effector communication channel buffer."
+msgstr "清空指定末端通信通道缓冲区。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.get_ch_data:1
+msgid ""
+"Read end-effector channel data and return (length, hexadecimal_text), or (0, "
+"empty_bytes) on failure."
+msgstr "读取末端通信通道的数据，返回（长度，十六进制文本）；失败时返回（0，空字节串）。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_ch_data:1
+msgid "Send up to 256 bytes to end-effector channel 1, 2 or 3 and return the SDK result."
+msgstr "向末端通道 1、2 或 3 发送最多 256 字节，并返回 SDK 结果。"
+
+#: pymarvin.fx_robot.Concise_Marvin_Robot.set_vel_est_step:1
+msgid "Set the selected arm's velocity-estimation step in milliseconds."
+msgstr "设置指定机械臂的速度估计步长，单位为毫秒。"
+
+#: ../../api/_generated/pymarvin.rst:17
+msgid "pymarvin.Marvin_Kine"
+msgstr "pymarvin.Marvin_Kine"
+
+#: pymarvin.fx_kine.Marvin_Kine:1
+msgid ""
+"Offline kinematics and planning interface. Load a model and initialize its type, DH "
+"table and limits before robot-specific calculations."
+msgstr "离线运动学和规划接口；进行机器人相关计算前，应先加载机型并初始化类型、DH 表和限位。"
+
+#: pymarvin.fx_kine.Marvin_Kine.create_point_set:1
+msgid "Create an owned PointSet with 1 through 40 values per point (default 6)."
+msgstr "创建每点包含 1 至 40 个数值的自有 PointSet，默认为 6 维。"
+
+#: pymarvin.fx_kine.Marvin_Kine.destroy_point_set:1
+msgid ""
+"Close an owned PointSet. Repeated closing is safe; its storage is also reclaimed "
+"automatically."
+msgstr "关闭自有 PointSet；重复关闭安全，存储空间也会自动回收。"
+
+#: pymarvin.fx_kine.Marvin_Kine.get_point_set_data:1
+msgid ""
+"Copy an owned PointSet to nested lists. dimension must match the stored point "
+"dimension."
+msgstr "将自有 PointSet 复制为嵌套列表，dimension 必须匹配点集存储维度。"
+
+#: pymarvin.fx_kine.Marvin_Kine.log_switch:1
+msgid "Set kinematics SDK logging: 1 enables messages and 0 disables them."
+msgstr "设置运动学 SDK 日志：1 开启消息，0 关闭消息。"
+
+#: pymarvin.fx_kine.Marvin_Kine.load_config:1
+msgid ""
+"Read a robot configuration file for arm_type 0 (left) or 1 (right). Return both arms'"
+" configuration arrays or None."
+msgstr "为 arm_type 0 左臂或 1 右臂读取机器人配置文件，返回双臂配置数组，失败时返回 None。"
+
+#: pymarvin.fx_kine.Marvin_Kine.initial_kine:1
+msgid ""
+"Initialize robot type, an 8x4 DH table, 7x4 joint limits and 4x3 joint-6/7 "
+"interference parameters, in that order."
+msgstr "依次初始化机器人类型、8x4 DH 表、7x4 关节限位和 4x3 六七关节干涉参数。"
+
+#: pymarvin.fx_kine.Marvin_Kine.set_tool_kine:1
+msgid "Set a 4x4 homogeneous tool transform for forward and inverse kinematics."
+msgstr "为正逆运动学设置 4x4 齐次工具变换矩阵。"
+
+#: pymarvin.fx_kine.Marvin_Kine.remove_tool_kine:1
+msgid "Remove the tool transform from this robot's kinematics."
+msgstr "移除此机器人运动学中的工具变换。"
+
+#: pymarvin.fx_kine.Marvin_Kine.set_user_frame_kine:1
+msgid "Set a 4x4 homogeneous user-frame transform."
+msgstr "设置 4x4 齐次用户坐标系变换矩阵。"
+
+#: pymarvin.fx_kine.Marvin_Kine.remove_user_frame_kine:1
+msgid "Remove the user-frame transform."
+msgstr "移除用户坐标系变换。"
+
+#: pymarvin.fx_kine.Marvin_Kine.fk:1
+msgid ""
+"Compute a 4x4 TCP transform from seven joint angles in degrees. Return False when the"
+" SDK cannot solve it."
+msgstr "根据七个单位为度的关节角计算 4x4 TCP 变换，SDK 无法求解时返回 False。"
+
+#: pymarvin.fx_kine.Marvin_Kine.fk_nsp:1
+msgid ""
+"Compute the TCP transform and 3x3 null-space reference matrix from seven joint angles"
+" in degrees."
+msgstr "根据七个单位为度的关节角，计算 TCP 变换和 3x3 零空间参考矩阵。"
+
+#: pymarvin.fx_kine.Marvin_Kine.ik:1
+msgid ""
+"Solve inverse kinematics in place using FX_InvKineSolvePara. Return the same "
+"parameter object or False."
+msgstr "通过 FX_InvKineSolvePara 原地求解逆运动学，返回同一参数对象或 False。"
+
+#: pymarvin.fx_kine.Marvin_Kine.mat4x4_to_mat1x16:1
+msgid "Flatten a 4x4 transform in row-major order for an inverse-kinematics target."
+msgstr "按行主序展平 4x4 变换，以用作逆运动学目标。"
+
+#: pymarvin.fx_kine.Marvin_Kine.ik_nsp:1
+msgid ""
+"Refine an inverse-kinematics solution with null-space constraints. Return the "
+"parameter object or False."
+msgstr "使用零空间约束优化逆运动学解，返回参数对象或 False。"
+
+#: pymarvin.fx_kine.Marvin_Kine.joints2JacobMatrix:1
+msgid ""
+"Return the 6x7 geometric Jacobian for seven joint angles in degrees. Linear rows use "
+"metres per radian."
+msgstr "返回七个单位为度的关节角对应的 6x7 几何雅可比矩阵，线速度行使用米每弧度。"
+
+#: pymarvin.fx_kine.Marvin_Kine.mat4x4_to_xyzabc:1
+msgid "Convert a 4x4 homogeneous transform to XYZABC, using millimetres and degrees."
+msgstr "将 4x4 齐次变换转换为 XYZABC，使用毫米和度。"
+
+#: pymarvin.fx_kine.Marvin_Kine.xyzabc_to_mat4x4:1
+msgid "Convert six XYZABC values in millimetres/degrees to a 4x4 homogeneous transform."
+msgstr "将 6 个使用毫米及度的 XYZABC 数值转换为 4x4 齐次变换。"
+
+#: pymarvin.fx_kine.Marvin_Kine.calculate_end_xyzabc:1
+msgid ""
+"Apply a three-dimensional translation and the selected SDK rotation convention to a "
+"six-element XYZABC pose."
+msgstr "对六元素 XYZABC 位姿应用三维平移和所选 SDK 旋转约定。"
+
+#: pymarvin.fx_kine.Marvin_Kine.movL:1
+msgid ""
+"Plan a Cartesian straight line and save its PVT file. Poses use mm/degrees; velocity "
+"and acceleration use mm/s and mm/s squared."
+msgstr "规划笛卡尔直线并保存其 PVT 文件；位姿使用毫米和度，速度与加速度使用毫米每秒及毫米每二次方秒。"
+
+#: pymarvin.fx_kine.Marvin_Kine.movLA:1
+msgid ""
+"Plan a Cartesian straight line and return (point_lists, owned_point_set). On failure "
+"return ([], None)."
+msgstr "规划笛卡尔直线并返回 (point_lists, owned_point_set)，失败时返回 ([], None)。"
+
+#: pymarvin.fx_kine.Marvin_Kine.movL_KeepJ:1
+msgid ""
+"Plan a Cartesian straight line constrained by start/end joint configurations and save"
+" its PVT file."
+msgstr "根据起止关节构型约束规划笛卡尔直线，并保存其 PVT 文件。"
+
+#: pymarvin.fx_kine.Marvin_Kine.movL_KeepJA:1
+msgid ""
+"Plan a joint-configuration-constrained Cartesian line and return (point_lists, "
+"owned_point_set)."
+msgstr "规划具有关节构型约束的笛卡尔直线，并返回 (point_lists, owned_point_set)。"
+
+#: pymarvin.fx_kine.Marvin_Kine.mov_target:1
+msgid "Plan to a target Cartesian pose and return (point_lists, owned_point_set)."
+msgstr "规划至目标笛卡尔位姿，并返回 (point_lists, owned_point_set)。"
+
+#: pymarvin.fx_kine.Marvin_Kine.movL_synchronous:1
+msgid ""
+"Plan synchronized dual-arm Cartesian motion. Return (left_data, left_points, "
+"right_data, right_points)."
+msgstr "规划双臂同步笛卡尔运动，并返回 (left_data, left_points, right_data, right_points)。"
+
+#: pymarvin.fx_kine.Marvin_Kine.multi_movL_set_start:1
+msgid ""
+"Initialize a multipoint Cartesian plan with start/end poses, reference joints, "
+"tolerance and null-space parameters."
+msgstr "使用起止位姿、参考关节、容差和零空间参数初始化多点笛卡尔规划。"
+
+#: pymarvin.fx_kine.Marvin_Kine.multi_movL_next_point:1
+msgid ""
+"Append the next pose, tolerance, null-space constraints, velocity and acceleration to"
+" a multipoint plan."
+msgstr "向多点规划追加下一位姿、容差、零空间约束、速度及加速度。"
+
+#: pymarvin.fx_kine.Marvin_Kine.multi_movL_get_points:1
+msgid "Fetch a multipoint Cartesian plan as (point_lists, owned_point_set)."
+msgstr "以 (point_lists, owned_point_set) 形式获取多点笛卡尔规划。"
+
+#: pymarvin.fx_kine.Marvin_Kine.identify_tool_dyn:1
+msgid ""
+"Identify tool dynamics from recorded data for type 1 (CCS) or 2 (SRS). Return ten "
+"dynamic parameters or the official error text."
+msgstr "根据记录数据辨识类型 1 CCS 或 2 SRS 的工具动力学，返回 10 项动力学参数或官方错误文本。"
+
+#: pymarvin.fx_kine.Marvin_Kine.identify_tool_dyn_m20:1
+msgid ""
+"Identify M20 tool dynamics using an INI configuration and recorded data. Return ten "
+"parameters or the official error text."
+msgstr "使用 INI 配置和记录数据辨识 M20 工具动力学，返回 10 项参数或官方错误文本。"
+
+#: pymarvin.fx_kine.Marvin_Kine.jnt_tau_to_ee_tau:1
+msgid ""
+"Map seven joint torques in N m to six end-effector force/torque components at the "
+"given joint angles."
+msgstr "在指定关节角下，将 7 项牛米关节扭矩映射为 6 项末端力及扭矩分量。"
+
+#: pymarvin.fx_kine.Marvin_Kine.cal_ee_linear_vel:1
+msgid ""
+"Return TCP linear speed in mm/s from seven joint angles and angular rates in degrees "
+"and degrees/s."
+msgstr "根据 7 个单位为度的关节角及单位为度每秒的角速度，返回单位为毫米每秒的 TCP 线速度。"
+
+#: ../../api/_generated/pymarvin.rst:23
+msgid "pymarvin.Marvin_Interference"
+msgstr "pymarvin.Marvin_Interference"
+
+#: pymarvin.fx_interference.Marvin_Interference:1
+msgid "Check distances and collisions using the bundled interference SDK."
+msgstr "使用随包提供的干涉检测 SDK 检查距离和碰撞。"
+
+#: pymarvin.fx_interference.Marvin_Interference:3
+msgid ""
+"The normal call order is ``create()``, ``init()``, ``update_cord()``, "
+"``update_convex()``, ``calc_interf_distance()``, and ``on_is_interf()``. "
+"Configuration arguments may be paths or the corresponding definition text."
+msgstr ""
+"通常调用顺序为 "
+"``create()``、``init()``、``update_cord()``、``update_convex()``、``calc_interf_distance()``"
+" 和 ``on_is_interf()``。配置参数可以是文件路径或相应的定义文本。"
+
+#: pymarvin.fx_interference.Marvin_Interference.create:1
+msgid "Allocate and return the owned native interference context."
+msgstr "分配并返回由本对象管理的原生干涉检测上下文。"
+
+#: pymarvin.fx_interference.Marvin_Interference.destroy:1
+msgid "Release the native context. Repeated calls are safe."
+msgstr "释放原生上下文；重复调用安全。"
+
+#: pymarvin.fx_interference.Marvin_Interference.init:1
+msgid "Load coordinate, link, input, convex, and interference definitions."
+msgstr "加载坐标、连杆、输入、凸包和干涉检测定义。"
+
+#: pymarvin.fx_interference.Marvin_Interference.update_cord:1
+msgid "Update one coordinate group with its current double values."
+msgstr "使用当前 double 数值更新一个坐标组。"
+
+#: pymarvin.fx_interference.Marvin_Interference.update_convex:1
+msgid "Rebuild convex collision geometry after coordinate updates."
+msgstr "坐标更新后重建凸包碰撞几何体。"
+
+#: pymarvin.fx_interference.Marvin_Interference.calc_interf_distance:1
+msgid "Calculate minimum distances for every configured collision pair."
+msgstr "计算每个已配置碰撞对的最小距离。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_com:1
+msgid "Return ``(status, [x, y, z])`` for the weighted center of mass."
+msgstr "返回加权质心对应的 ``(status, [x, y, z])``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_cords_num:1
+msgid "Return ``(status, count)`` for the loaded coordinate groups."
+msgstr "返回已加载坐标组对应的 ``(status, count)``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_mass:1
+msgid "Return ``(status, masses)`` for all configured rigid bodies."
+msgstr "返回所有已配置刚体对应的 ``(status, masses)``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_mass:3
+msgid ""
+"``count`` must equal the coordinate count reported by :meth:`get_cords_num`; a "
+"mismatch raises ``ValueError`` before entering the native SDK."
+msgstr "``count`` 必须等于 :meth:`get_cords_num` 返回的坐标数量；数量不匹配时会在进入原生 SDK 前抛出 ``ValueError``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_min_span:1
+msgid "Return ``(status, distance)`` for the global minimum separation."
+msgstr "返回全局最小间隔对应的 ``(status, distance)``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.get_interf_span:1
+msgid "Return ``(status, distance)`` for one collision pair."
+msgstr "返回一个碰撞对对应的 ``(status, distance)``。"
+
+#: pymarvin.fx_interference.Marvin_Interference.on_is_interf:1
+msgid "Return the official interference status for the configured thresholds."
+msgstr "返回按照已配置阈值计算的官方干涉状态。"
+
+#: ../../api/_generated/pymarvin.rst:29
+msgid "pymarvin.PointSet"
+msgstr "pymarvin.PointSet"
+
+#: ../../../docstring pymarvin._kinematics.PointSet:1
+msgid "Owned trajectory points with explicit close and context-manager support."
+msgstr "拥有内存的轨迹点集，支持显式关闭和上下文管理器。"
+
+#: ../../../docstring pymarvin.PointSet.closed:1
+msgid "Whether the underlying point set has been released."
+msgstr "底层点集是否已经释放。"
+
+#: ../../../docstring pymarvin.PointSet.dimension:1
+msgid "Number of coordinates in each point."
+msgstr "每个点的坐标数量。"
+
+#: ../../api/_generated/pymarvin.rst:36
+msgid "pymarvin.DCSS"
+msgstr "pymarvin.DCSS"
+
+#: pymarvin.fx_robot.DCSS:1
+msgid "Packed dual-arm telemetry and configuration exchange record."
+msgstr "按指定对齐方式存储双臂遥测及配置交换记录。"
+
+#: ../../api/_generated/pymarvin.rst:42
+msgid "pymarvin.RT_IN"
+msgstr "pymarvin.RT_IN"
+
+#: pymarvin.fx_robot.RT_IN:1
+msgid "Packed per-arm input commands and controller settings."
+msgstr "按规定字节布局存储的各机械臂输入指令和控制器设置。"
+
+#: ../../api/_generated/pymarvin.rst:48
+msgid "pymarvin.RT_OUT"
+msgstr "pymarvin.RT_OUT"
+
+#: pymarvin.fx_robot.RT_OUT:1
+msgid "Packed per-arm feedback and trajectory status."
+msgstr "按规定字节布局存储的各机械臂反馈和轨迹状态。"
+
+#: ../../api/_generated/pymarvin.rst:54
+msgid "pymarvin.StateCtr"
+msgstr "pymarvin.StateCtr"
+
+#: pymarvin.fx_robot.StateCtr:1
+msgid "Packed controller state, commanded state and error code."
+msgstr "按规定字节布局存储的控制器状态、指令状态和错误码。"
+
+#: ../../api/_generated/pymarvin.rst:60
+msgid "pymarvin.FTCmd"
+msgstr "pymarvin.FTCmd"
+
+#: pymarvin.fx_robot.FTCmd:1
+msgid ""
+"Force/torque control record passed by value to the native SDK. fxDir has six "
+"elements; distances use mm and angles use degrees."
+msgstr "按值传递给原生 SDK 的力及扭矩控制记录，fxDir 包含 6 个元素，距离使用毫米，角度使用度。"
+
+#: ../../api/_generated/pymarvin.rst:66
+msgid "pymarvin.FX_InvKineSolvePara"
+msgstr "pymarvin.FX_InvKineSolvePara"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara:1
+msgid ""
+"Inverse-kinematics inputs and outputs, including target transform, reference joints, "
+"null-space parameters and solution diagnostics."
+msgstr "逆运动学输入输出记录，包含目标变换、参考关节、零空间参数和求解诊断信息。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_input_ik_target_tcp:1
+msgid "Set the target TCP transform (16 row-major values)."
+msgstr "设置目标 TCP 变换，按行主序排列的 16 个数值。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_input_ik_ref_joint:1
+msgid "Set the seven reference joint angles in degrees."
+msgstr "设置7 个单位为度的参考关节角。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_input_ik_zsp_type:1
+msgid "Set the null-space optimization type."
+msgstr "设置零空间优化类型。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_input_ik_zsp_para:1
+msgid "Set the six null-space optimization parameters."
+msgstr "设置6 项零空间优化参数。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_input_zsp_angle:1
+msgid "Set the null-space arm angle in degrees."
+msgstr "设置单位为度的零空间臂角。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_dgr1:1
+msgid "Set the joint-2 singularity tolerance in degrees."
+msgstr "设置单位为度的第二关节奇异容差。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_dgr2:1
+msgid "Set the joint-6 singularity tolerance in degrees."
+msgstr "设置单位为度的第六关节奇异容差。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_dgr3:1
+msgid "Set the reserved singularity parameter."
+msgstr "设置预留奇异参数。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_all_inputs:1
+msgid "Set named inverse-kinematics inputs, rejecting unknown names."
+msgstr "设置具名逆运动学输入，并拒绝未知名称。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_ret_joint:1
+msgid "Return the seven selected solution joint angles in degrees."
+msgstr "返回7 个单位为度的所选解关节角。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_all_joint:1
+msgid "Return all candidate joint solutions as a flat 64-value list."
+msgstr "返回以 64 个数值的展平列表表示的全部候选关节解。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_result_num:1
+msgid "Return the number of inverse-kinematics solutions."
+msgstr "返回逆运动学解的数量。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_is_out_range:1
+msgid "Return the target-out-of-reach flag."
+msgstr "返回目标超出可达范围标志。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_is_deg:1
+msgid "Return the seven joint-singularity flags."
+msgstr "返回7 项关节奇异标志。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_jnt_exd_tags:1
+msgid "Return the seven joint-limit violation flags."
+msgstr "返回7 项关节超限标志。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_jnt_exd_abs:1
+msgid "Return the maximum absolute joint-limit violation."
+msgstr "返回最大关节超限绝对值。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_is_jnt_exd:1
+msgid "Return the joint-limit violation flag."
+msgstr "返回关节超限标志。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_run_lmt_positive:1
+msgid "Return the seven positive running joint limits."
+msgstr "返回7 项关节运行正限位。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_output_run_lmt_negative:1
+msgid "Return the seven negative running joint limits."
+msgstr "返回7 项关节运行负限位。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_all_outputs:1
+msgid "Return all inverse-kinematics result fields as a dictionary."
+msgstr "以字典形式返回全部逆运动学结果字段。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.set_output_jnt_exd_tags:1
+msgid "Set the seven joint-limit violation flags."
+msgstr "设置7 项关节超限标志。"
+
+#: pymarvin.fx_kine.FX_InvKineSolvePara.get_input_ik_zsp_para:1
+msgid "Return the six null-space optimization parameters."
+msgstr "返回6 项零空间优化参数。"
+
+#: ../../api/_generated/pymarvin.rst:72
+msgid "pymarvin.FX_Jacobi"
+msgstr "pymarvin.FX_Jacobi"
+
+#: pymarvin.fx_kine.FX_Jacobi:1
+msgid "Six-by-seven geometric Jacobian record with an active-axis count."
+msgstr "包含有效轴数量的 6x7 几何雅可比矩阵记录。"
+
+#: pymarvin.fx_kine.FX_Jacobi.set_jcb:1
+msgid "Set a 6x7 geometric Jacobian from nested numeric rows."
+msgstr "根据嵌套数值行设置 6x7 几何雅可比矩阵。"
+
+#: pymarvin.fx_kine.FX_Jacobi.get_jcb:1
+msgid "Return the stored 6x7 geometric Jacobian as nested lists."
+msgstr "以嵌套列表形式返回存储的 6x7 几何雅可比矩阵。"
+
+#: ../../api/_generated/pymarvin.rst:78
+msgid "pymarvin.ArmsSynchronousPlanningParams"
+msgstr "pymarvin.ArmsSynchronousPlanningParams"
+
+#: pymarvin.fx_kine.ArmsSynchronousPlanningParams:1
+msgid ""
+"Dual-arm synchronous planning parameters. Set both arm poses, reference joints, "
+"frequency, velocity, acceleration and coordinate-frame flag."
+msgstr "双臂同步规划参数，需设置双臂位姿、参考关节、频率、速度、加速度和坐标系标志。"
+
+#: ../../api/_generated/pymarvin.rst:84
+msgid "pymarvin.Vect7"
+msgstr "pymarvin.Vect7"
+
+#: pymarvin.fx_kine.Vect7:1
+msgid "Seven double-precision numeric values with a flat-list conversion helper."
+msgstr "七个双精度数值，支持转换为一维列表。"
+
+#: pymarvin.fx_kine.Matrix4.to_list:1 pymarvin.fx_kine.Matrix8.to_list:1
+#: pymarvin.fx_kine.Vect7.to_list:1
+msgid "Return a copy of the record's flat numeric values as a Python list."
+msgstr "将记录的一维数值复制为 Python 列表并返回。"
+
+#: ../../api/_generated/pymarvin.rst:90
+msgid "pymarvin.Matrix4"
+msgstr "pymarvin.Matrix4"
+
+#: pymarvin.fx_kine.Matrix4:1
+msgid "A 4x4 double-precision matrix stored as sixteen row-major values."
+msgstr "4×4 双精度矩阵，以按行排列的十六个数值存储。"
+
+#: ../../api/_generated/pymarvin.rst:96
+msgid "pymarvin.Matrix8"
+msgstr "pymarvin.Matrix8"
+
+#: pymarvin.fx_kine.Matrix8:1
+msgid "An 8x8 double-precision matrix stored as sixty-four row-major values."
+msgstr "8×8 双精度矩阵，以按行排列的六十四个数值存储。"
+

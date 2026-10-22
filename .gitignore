@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.dll
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# virtualenv
+.venv
+
+# IDE settings
+.vscode/
+.idea/
+
+# Local runtime data
+.history/
+.uv-cache/
+.tools/
+
+# Agent settings
+.codex/
+.claude/
+.qoder/
+.agents/
+
+# Tests and generated documentation
+.pytest_cache/
+docs/_build/
+.coverage*
+coverage-*.xml
+coverage-*.json
+htmlcov/
+*.gcda
+*.gcno
+docs/locale/**/*.mo
+docs/api/_generated/
+*.pyd
+wheelhouse/

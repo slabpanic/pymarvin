@@ -1,0 +1,14 @@
+Tianji Marvin robot SDK
+
+The control SDK (version 100343014), kinematics SDK and interference-check SDK
+are distributed under Apache License 2.0, as confirmed by the project
+maintainer. Original authorship notices remain in the source files under
+src/sdk/.
+
+The bundled snapshot was obtained from the master branch of
+https://github.com/cynthia-you/TJ_FX_ROBOT_CONTRL_SDK at commit
+bc4f61104a66e82b4c750f3a0bc7a95c9ef44139.
+
+This distribution includes modifications for Python bindings, Windows build
+compatibility and force-control parameter initialization.
+See THIRD_PARTY_NOTICES.md for the source layout and modification details.

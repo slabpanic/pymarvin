@@ -1,0 +1,32 @@
+codecov:
+  require_ci_to_pass: true
+  notify:
+    after_n_builds: 2
+
+coverage:
+  precision: 2
+  round: down
+  status:
+    project:
+      python:
+        flags: [python]
+        target: auto
+        threshold: 1%
+      native:
+        flags: [native]
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
+        informational: true
+flags:
+  python:
+    paths: [src/pymarvin/]
+    carryforward: false
+  native:
+    paths: [src/bindings/]
+    carryforward: false
+comment:
+  layout: "reach,diff,flags,files"
+  require_changes: true

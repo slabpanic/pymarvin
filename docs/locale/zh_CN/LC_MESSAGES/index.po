@@ -1,0 +1,42 @@
+# Chinese (Simplified, China) translations for pymarvin.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the pymarvin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pymarvin VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-22 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.rst:2
+msgid "pymarvin"
+msgstr "pymarvin"
+
+#: ../../index.rst:4
+msgid ""
+"Python bindings for Tianji Marvin robot control, offline kinematics and interference "
+"checks, using uv, CMake, scikit-build-core and nanobind. The distribution and import "
+"names are both ``pymarvin``."
+msgstr ""
+"Tianji Marvin 机器人控制、离线运动学和干涉检测的 Python 绑定，使用 uv、CMake、scikit-build-core 和 nanobind "
+"构建。发行包名和导入名均为 ``pymarvin``。"
+
+#: ../../index.rst:8
+msgid ""
+"The package compiles the included SDK sources instead of loading vendor binary "
+"libraries. Prebuilt wheels support Linux x86_64/aarch64 and Windows x64 on CPython "
+"3.10–3.14."
+msgstr ""
+"本包编译附带的 SDK 源码，不加载厂商预编译库。预编译 wheel 支持 CPython 3.10–3.14，以及 Linux x86_64/aarch64 和 "
+"Windows x64。"
+

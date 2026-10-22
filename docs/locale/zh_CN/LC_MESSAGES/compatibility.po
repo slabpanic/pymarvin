@@ -1,0 +1,186 @@
+# Chinese (Simplified, China) translations for pymarvin.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the pymarvin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pymarvin VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-22 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../compatibility.rst:2
+msgid "Compatibility and implementation"
+msgstr "兼容性与实现"
+
+#: ../../compatibility.rst:4
+msgid ""
+"The public API follows the official Marvin ``fx_robot.py`` and ``fx_kine.py`` "
+"interfaces, preserving method names, argument order, defaults and return conventions."
+" The nanobind sources in ``src/bindings/`` and Python facades in ``src/pymarvin/`` "
+"are maintained directly. English API docstrings live alongside their implementations."
+msgstr ""
+"公开 API 遵循 Marvin 官方 ``fx_robot.py`` 和 ``fx_kine.py`` 接口，保留方法名称、参数顺序、默认值和返回约定。直接维护 "
+"``src/bindings/`` 中的 nanobind 源码与 ``src/pymarvin/`` 中的 Python 接口，英文 API 文档字符串与实现放在一起。"
+
+#: ../../compatibility.rst:9
+msgid ""
+"The bundled official SDK snapshot comes from the ``master`` branch of "
+"`TJ_FX_ROBOT_CONTRL_SDK <https://github.com/cynthia-you/TJ_FX_ROBOT_CONTRL_SDK>`_ at "
+"commit ``bc4f61104a66e82b4c750f3a0bc7a95c9ef44139``. Project binding changes and source"
+" corrections are recorded in ``THIRD_PARTY_NOTICES.md``."
+msgstr ""
+"随包提供的官方 SDK 快照来自 ``TJ_FX_ROBOT_CONTRL_SDK`` 的 ``master`` 分支，提交号为 "
+"``bc4f61104a66e82b4c750f3a0bc7a95c9ef44139``。项目绑定修改和源码修正记录在 "
+"``THIRD_PARTY_NOTICES.md`` 中。"
+
+#: ../../compatibility.rst:14
+msgid ""
+"ctypes is used only for compatible records and temporary buffers. All SDK calls go "
+"through the compiled nanobind modules; no ``CDLL`` or ``WinDLL`` loading is used. "
+"Every public record size and field offset is checked against the C++ compiler at "
+"import time."
+msgstr ""
+"ctypes 仅用于兼容记录和临时缓冲区；所有 SDK 调用均通过编译的 nanobind 模块，不使用 ``CDLL`` 或 ``WinDLL`` "
+"加载。导入时会核对全部公开记录的大小和字段偏移与 C++ 编译器结果一致。"
+
+#: ../../compatibility.rst:18
+msgid ""
+"The three SDKs contain common helper names but separate implementations. They are "
+"compiled into separate extensions with hidden symbols. Point data is copied across "
+"the control and kinematics boundary instead of casting their C++ object pointers."
+msgstr "三个 SDK 含有同名辅助类型，但实现彼此独立。它们编译为带隐藏符号的独立扩展。控制与运动学之间传递点数据时会复制内容，不会强制转换 C++ 对象指针。"
+
+#: ../../compatibility.rst:22
+msgid ""
+"SDK state is global: instances share a connection and model slots, including arm "
+"slots 0 and 1. Calls retain the GIL; concurrent SDK operations from multiple threads "
+"are not promised."
+msgstr "SDK 状态为全局状态；实例共享连接和模型槽位，包括机械臂槽位 0 和 1。调用保留 GIL，不承诺多个线程并发执行 SDK 操作。"
+
+#: ../../compatibility.rst:27
+msgid "Control SDK revision"
+msgstr "控制 SDK 版本"
+
+#: ../../compatibility.rst:29
+msgid ""
+"Control builds use ``src/sdk/control/``, reporting version ``100343014``. Kinematics "
+"sources live in ``src/sdk/kinematics/`` and interference sources in "
+"``src/sdk/interference/``. All three SDKs are Apache-2.0 and are compiled into "
+"distributed wheels. Obsolete SDK revisions, Python reference copies and vendor binary"
+" libraries have been removed. Tests compare the active SDK headers with the installed"
+" native API."
+msgstr ""
+"控制构建使用 ``src/sdk/control/``，报告版本 ``100343014``。运动学源码位于 "
+"``src/sdk/kinematics/``，干涉检测源码位于 ``src/sdk/interference/``。三个 SDK 均采用 Apache-2.0 "
+"协议并编译进发布的 wheel。旧版 SDK、Python 参考副本和厂商二进制库已移除。测试会将当前 SDK 头文件与已安装的原生 API 对比。"
+
+#: ../../compatibility.rst:36
+msgid ""
+"Restored interfaces cover ABI checks, force/torque commands, velocity-estimation "
+"steps, robot names, force-sensor reset, system time, reboot, motion stopping and user"
+" telemetry selection. ``FTCmd`` is passed by value and robot names use a checked "
+"512-byte writable output buffer."
+msgstr ""
+"补齐的接口包括 ABI 检查、力及扭矩指令、速度估计步长、机器人名称、力传感器清零、系统时间、重启、停止运动和用户遥测选择。 ``FTCmd`` "
+"按值传入，机器人名称使用经过检查的 512 字节可写输出缓冲区。"
+
+#: ../../compatibility.rst:41
+msgid ""
+"The binding checks that the native controller instance exists before commands that "
+"would otherwise dereference a null singleton. The official facade still applies its "
+"existing exception and failure-return conventions. Releasing an uninitialized "
+"instance repeatedly is safe."
+msgstr "绑定会在调用可能解引用空单例的控制指令前检查原生控制器实例是否存在；官方接口仍采用原有异常和失败返回约定。未初始化的实例可以安全重复释放。"
+
+#: ../../compatibility.rst:46
+msgid ""
+"The official ``fx_interference`` interface and the interference-check implementation "
+"are included under ``src/sdk/interference/``. The bundled model definition files are "
+"installed under ``pymarvin/interference_configs/``. Robot-controller firmware "
+"compatibility must still be established for the installed SDK version."
+msgstr ""
+"官方 ``fx_interference`` 接口及干涉检测实现已包含在 ``src/sdk/interference/`` 中。随包安装的模型定义文件位于 "
+"``pymarvin/interference_configs/``。仍需确认机器人控制器固件与所安装 SDK 版本兼容。"
+
+#: ../../compatibility.rst:52
+msgid "Platform support"
+msgstr "平台支持"
+
+#: ../../compatibility.rst:54
+msgid ""
+"Release wheels target Linux x86_64/aarch64 with glibc 2.28 or newer and Windows x64 "
+"on CPython 3.10–3.14. macOS is not included. The SDK uses its POSIX implementation on"
+" Linux and Windows sockets, shared memory and multimedia timers on Windows."
+msgstr ""
+"发布的 wheel 支持 CPython 3.10–3.14、Linux x86_64/aarch64（glibc 2.28 及以上）和 Windows x64，不包含 "
+"macOS。SDK 在 Linux 上使用 POSIX 实现，在 Windows 上使用 Windows 套接字、共享内存和多媒体定时器。"
+
+#: ../../compatibility.rst:58
+msgid ""
+"C ``long`` is 64-bit on supported Linux targets and 32-bit on Windows x64. The Python"
+" facade uses platform-native ctypes values for these arguments; telemetry uses fixed-"
+"width fields whose sizes and offsets are checked against the compiled SDK."
+msgstr ""
+"C ``long`` 在支持的 Linux 平台上为 64 位，在 Windows x64 上为 32 位。Python 接口使用与平台匹配的 ctypes "
+"类型传递这些参数；遥测数据使用固定宽度字段，其大小和偏移会与编译后的 SDK 比较验证。"
+
+#: ../../compatibility.rst:63
+msgid "Source corrections"
+msgstr "源码修正"
+
+#: ../../compatibility.rst:65
+msgid ""
+"The vendor linear-speed function multiplies the Jacobian by joint positions instead "
+"of angular rates and mixes metres with millimetres. The binding uses ``norm(J_linear "
+"@ radians(angvel)) * 1000`` to return mm/s, verified against finite differences of "
+"FK."
+msgstr ""
+"厂商线速度函数误将关节位置用于雅可比计算，未使用角速度且混用了米与毫米。绑定改用 ``norm(J_linear @ radians(angvel)) * 1000`` "
+"返回毫米每秒，并通过 FK 有限差分验证。"
+
+#: ../../compatibility.rst:69
+msgid ""
+"Both ``FTArmControl`` branches now zero-initialize all seven force-control array "
+"elements directly in the maintained SDK source. Windows builds explicitly include the"
+" multimedia API and use narrow shared-memory path APIs. Original SDK authorship "
+"notices are retained; modifications are recorded in ``THIRD_PARTY_NOTICES.md``."
+msgstr ""
+"两个 ``FTArmControl`` 分支现在直接在维护的 SDK 源码中将全部七个力控数组元素初始化为零。Windows 构建显式包含多媒体 API "
+"头文件，并使用窄字符共享内存路径 API。SDK 原作者声明予以保留，修改记录见 ``THIRD_PARTY_NOTICES.md``。"
+
+#: ../../compatibility.rst:75
+msgid "Validation scope"
+msgstr "验证范围"
+
+#: ../../compatibility.rst:77
+msgid ""
+"Offline tests cover numeric kinematics, public facade marshaling with recording "
+"backends, buffer validation, ownership and failure paths. GCC coverage measures "
+"binding code under ``src/bindings/``; SDK source and nanobind internals are not "
+"counted. Python coverage includes all package modules and branches. Each release "
+"wheel is installed and tested on its matching platform before publication."
+msgstr ""
+"离线测试覆盖运动学数值计算、基于记录后端的公开接口参数封送、缓冲区校验、所有权和失败路径。GCC 覆盖率只统计 ``src/bindings/`` 下的绑定代码，不统计 "
+"SDK 源码和 nanobind 内部实现；Python 覆盖率包含包内全部模块和分支。每个发布 wheel 都会先在匹配的平台上安装并通过测试。"
+
+#: ../../compatibility.rst:83
+msgid ""
+"No physical robot motion, PVT execution, controller update, network file transfer or "
+"sensor calibration has been validated. Offline coverage is not a hardware execution "
+"certification."
+msgstr "尚未验证实机运动、PVT 执行、控制器升级、网络文件传输或传感器标定；离线覆盖率不代表硬件执行认证。"
+
+#: ../../compatibility.rst:87
+msgid "See ``THIRD_PARTY_NOTICES.md`` for provenance, SDK modifications and licensing terms."
+msgstr "来源、SDK 修改和许可条款见 ``THIRD_PARTY_NOTICES.md``。"
+
