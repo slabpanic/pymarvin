@@ -1673,7 +1673,7 @@ def update_text_file_simple(mode, data_list, filename):
 
 def read_csv_file_to_float_strict(filename, expected_columns=16):
     """Parse the official two-row tool CSV format, preserving its zero-row, one-active-row and error return conventions."""
-    if not os.path.exists(filename):
+    if not os.path.isfile(filename):
         print(f"文件不存在: {filename}")
         return -1
     if os.path.getsize(filename) == 0:

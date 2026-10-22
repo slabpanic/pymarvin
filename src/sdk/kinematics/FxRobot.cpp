@@ -60,7 +60,7 @@ FX_BOOL LOADMvCfg(FX_CHAR *path, FX_INT32L TYPE[2], FX_DOUBLE GRV[2][3], FX_DOUB
 			fclose(fp);
 			return FX_FALSE;
 		}
-		if (c != 0x0a)
+		if (c != 0x0a && c != 0x0d)
 		{
 			fclose(fp);
 			return FX_FALSE;
@@ -78,7 +78,7 @@ FX_BOOL LOADMvCfg(FX_CHAR *path, FX_INT32L TYPE[2], FX_DOUBLE GRV[2][3], FX_DOUB
 				fclose(fp);
 				return FX_FALSE;
 			}
-			if (c != 0x0a)
+			if (c != 0x0a && c != 0x0d)
 			{
 				fclose(fp);
 				return FX_FALSE;
@@ -91,7 +91,7 @@ FX_BOOL LOADMvCfg(FX_CHAR *path, FX_INT32L TYPE[2], FX_DOUBLE GRV[2][3], FX_DOUB
 			fclose(fp);
 			return FX_FALSE;
 		}
-		if (c != 0x0a)
+		if (c != 0x0a && c != 0x0d)
 		{
 			fclose(fp);
 			return FX_FALSE;
@@ -105,7 +105,7 @@ FX_BOOL LOADMvCfg(FX_CHAR *path, FX_INT32L TYPE[2], FX_DOUBLE GRV[2][3], FX_DOUB
 				fclose(fp);
 				return FX_FALSE;
 			}
-			if (c != 0x0a)
+			if (c != 0x0a && c != 0x0d)
 			{
 				fclose(fp);
 				return FX_FALSE;
